@@ -7,15 +7,16 @@
  */
 
 get_header(); ?>
-
+<div class="row">
+  <div class="column grid_8" id="content">
 		<section id="primary">
-			<div id="content">
+			
 
 				<?php the_post(); ?>
 
 				<header class="page-header">
 					<h1 class="page-title"><?php
-						printf( __( 'Tag Archives: %s', 'themename' ), '<span>' . single_tag_title( '', false ) . '</span>' );
+						printf( __( 'Schlagwort: %s', 'themename' ), '<span>' . single_tag_title( '', false ) . '</span>' );
 					?></h1>
 				</header>
 
@@ -23,8 +24,11 @@ get_header(); ?>
 
 				<?php get_template_part( 'loop', 'tag' ); ?>
 
-			</div><!-- #content -->
-		</section><!-- #primary -->
-
-<?php get_sidebar(); ?>
+			<!-- #content -->
+		</section>
+    </div><!-- #primary -->
+    <div class="column grid_3">
+      <?php get_sidebar(); ?>
+    </div>
+  </div>
 <?php get_footer(); ?>

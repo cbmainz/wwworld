@@ -27,11 +27,11 @@ function toolbox_comment( $comment, $args, $depth ) {
           <?php echo get_avatar( $comment, 40 ); ?>
 
           <div class="comment-meta commentmetadata">
-            <?php printf( __( '%s <span class="says">said on</span>', 'themename' ), sprintf( '<cite class="fn">%s</cite><br />', get_comment_author_link() ) ); ?>
+            <?php printf( __( '%s <span class="said">schreibt am</span>', 'themename' ), sprintf( '<cite class="fn">%s</cite><br />', get_comment_author_link() ) ); ?>
             <a href="<?php echo esc_url( get_comment_link( $comment->comment_ID ) ); ?>"><time datetime="<?php comment_time( 'c' ); ?>">
             <?php
               /* translators: 1: date, 2: time */
-              printf( __( '%1$s at %2$s', 'themename' ), get_comment_date(),  get_comment_time() ); ?>:
+              printf( __( '%1$s um %2$s', 'themename' ), get_comment_date(),  get_comment_time() ); ?>:
             </time></a>
             <?php edit_comment_link( __( '(Edit)', 'themename' ), ' ' );
             ?>
@@ -78,12 +78,12 @@ endif; // ends check for toolbox_comment()
   <?php // You can start editing here -- including this comment! ?>
 
   <?php if ( have_comments() ) : ?>
-    <h3 id="comments-title">
+    <h2 id="comments-title">
       <?php
-          printf( _n( 'One Response to %2$s', '%1$s Responses to %2$s', get_comments_number(), 'themename' ),
+          printf( _n( 'Einen Kommentar zu %2$s', '%1$s Kommentare zu %2$s', get_comments_number(), 'themename' ),
               number_format_i18n( get_comments_number() ), '<em>' . get_the_title() . '</em>' );
       ?>
-    </h3>
+    </h2>
 
     <?php if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) : // are there comments to navigate through ?>
     <nav id="comment-nav-above">
@@ -117,7 +117,7 @@ endif; // ends check for toolbox_comment()
        */
       if ( ! comments_open() && ! is_page() ) :
       ?>
-      <p class="nocomments"><?php _e( 'Comments are closed.', 'themename' ); ?></p>
+      <p class="nocomments"><?php _e( 'Kommentare sind geschlossen.', 'themename' ); ?></p>
       <?php endif; // end ! comments_open() && ! is_page() ?>
 
 

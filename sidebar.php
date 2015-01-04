@@ -27,7 +27,4 @@
 
 
       <?php endif; // end sidebar widget area ?>
-      <aside id="search" class="widget widget_search">
-        <?php get_search_form(); ?>
-      </aside>
     </div><!-- #secondary .widget-area -->

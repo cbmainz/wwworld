@@ -21,7 +21,7 @@
   // Add the blog description for the home/front page.
   $site_description = get_bloginfo( 'description', 'display' );
   if ( $site_description && ( is_home() || is_front_page() ) )
-    echo " | $site_description";
+    echo "  $site_description";
 
   // Add a page number if necessary:
   if ( $paged >= 2 || $page >= 2 )
@@ -32,8 +32,12 @@
 <link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo( 'stylesheet_url' ); ?>" />
 <?php if ( is_singular() && get_option( 'thread_comments' ) ) wp_enqueue_script( 'comment-reply' ); ?>
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
-<link rel="shortcut icon" href="http://smyck.net/favicon.ico" />
+<link rel="shortcut icon" href="favicon.ico"/>
+<link rel="apple-touch-icon" href="https://cbmainz.me/cbmainz.svg"/>
 <link rel="alternate" type="application/rss+xml" title="<?php bloginfo('name'); ?> RSS Feed" href="<?php bloginfo('rss2_url'); ?>" />
+<link href='https://fonts.googleapis.com/css?family=Press+Start+2P' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Archivo+Narrow:400,400italic,700,700italic&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+<link href="style.css" type="text/css" rel="stylesheet" xmlns="http://www.w3.org/1999/xhtml"/>
 <!--[if lt IE 9]>
 <script src="<?php bloginfo( 'template_directory' ); ?>/html5.js" type="text/javascript"></script>
 <![endif]-->
@@ -56,4 +60,3 @@
       </div>
     </div>
   </header>
-
